@@ -1,0 +1,46 @@
+:root {
+    /****** logo ******/
+    --logo-grey: #1C1B1B;
+    --logo-red: #461515;
+    --logo-green: #2B3810;
+    --logo-mustard: #B27431;
+    --logo-pink: #D8A6AF;
+
+    /****** background ******/
+    --primary-background-color: #E6E8E3;
+
+    /****** interaction ******/
+    --dark-hover: #242323;
+    --dark-press: #2C2B2B;
+
+    --light-hover: #E6E6E6;
+    --light-press: #CCCCCC;
+
+    --disabled-background: #1c1b1b0d;
+    --disabled-label: #1c1b1b33;
+
+    /****** spacing ******/
+    --spacing-small: 0.5rem;
+    --spacing-medium: 1rem;
+    --spacing-large: 1.5rem;
+    --spacing-x-large: 2rem;
+
+    --border-radius: 2rem;
+
+    /****** font body ******/
+    --font-body-small: 0.875rem;
+    --font-body-medium: 1rem;
+    --font-body-large: 1.25rem;
+    --font-body-x-large: 1.5rem;
+
+    --line-height: 1.5rem;
+
+    --primary-font-color: #1C1B1B;
+    --secondary-font-color: #FFFFFF;
+
+    /****** font heading ******/
+    --font-heading-small: 1.75rem;
+    --font-heading-medium: 2rem;
+    --font-heading-large: 2.25rem;
+    --font-heading-x-large: 3rem;
+}

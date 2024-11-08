@@ -7,3 +7,14 @@
 a {
     text-decoration: none;
 }
+
+button {
+    border: none;
+    padding: 0.75rem 1rem;
+    border-radius: var(--border-radius);
+    background-color: var(--logo-green);
+}
+
+button a {
+    color: var(--secondary-font-color);
+}
