@@ -20,7 +20,8 @@
     --disabled-label: #1c1b1b33;
 
     /****** spacing ******/
-    --spacing-small: 0.5rem;
+    --spacing-x-small: 0.5rem;
+    --spacing-small: 0.75rem;
     --spacing-medium: 1rem;
     --spacing-large: 1.5rem;
     --spacing-x-large: 2rem;
@@ -39,7 +40,7 @@
     --secondary-font-color: #FFFFFF;
 
     /****** font heading ******/
-    --font-heading-small: 1.75rem;
+    --font-heading-small: 1.5rem;
     --font-heading-medium: 2rem;
     --font-heading-large: 2.25rem;
     --font-heading-x-large: 3rem;

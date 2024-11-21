@@ -4,17 +4,27 @@
     padding: 0;
 }
 
+@font-face {
+    font-family: Inter;
+    src: url(../assets/fonts/Inter-VariableFont_opsz\,wght.ttf);
+    font-weight: 400 600;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    background-color: var(--primary-background-color);
+}
+
 a {
     text-decoration: none;
+    color: var(--primary-font-color);
 }
 
-button {
+.primary__button {
     border: none;
-    padding: 0.75rem 1rem;
+    padding: var(--spacing-small) var(--spacing-medium);
     border-radius: var(--border-radius);
     background-color: var(--logo-green);
-}
-
-button a {
     color: var(--secondary-font-color);
 }
