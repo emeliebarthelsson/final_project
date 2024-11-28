@@ -65,3 +65,57 @@ main {
     font-size: var(--font-body-medium);
     line-height: var(--line-height);
 }
+
+/* tablet */
+@media screen and (min-width: 768px) {
+    .hero-container {
+        margin-bottom: var(--spacing-x-large);
+    }
+
+    .about__text {
+        padding: var(--spacing-x-large);
+    }
+
+    .review-container {
+        padding: var(--spacing-x-large);
+    }
+}
+
+/* desktop small */
+@media screen and (min-width: 1024px) {
+    .hero-container {
+        margin-bottom: var(--spacing-xx-large);
+    }
+
+    .about__text {
+        font-size: var(--font-body-large);
+        line-height: var(--line-height-large);
+        padding: var(--spacing-xx-large);
+    }
+
+    .review-container {
+        padding: var(--spacing-xx-large);
+    }
+
+    .review__text {
+        font-size: var(--font-body-large);
+        line-height: var(--line-height-large);
+    }
+}
+
+/* desktop medium */
+@media screen and (min-width: 1280px) {
+    .about-container {
+        width: 70%;
+        align-self: center;
+    }
+
+    .carousel__card {
+        width: 40%;
+    }
+
+    .review-container {
+        width: 70%;
+        align-self: center;
+    }
+}

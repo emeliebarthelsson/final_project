@@ -31,3 +31,45 @@ main {
 .about__text {
     font-size: var(--font-body-medium);
 }
+
+/* tablet */
+@media screen and (min-width: 768px) {
+    main {
+        flex-direction: row;
+        padding: var(--spacing-x-large);
+    }
+
+    .img-container {
+        flex-basis: 40%;
+    }
+
+    .about-container {
+        flex-basis: 60%;
+    }
+}
+
+/* desktop small */
+@media screen and (min-width: 1024px) {
+    main {
+        gap: var(--spacing-xx-large);
+        padding: var(--spacing-xx-large);
+    }
+
+    .about__heading {
+        font-size: var(--font-heading-medium);
+        margin-bottom: var(--spacing-large);
+    }
+    
+    .about__text {
+        font-size: var(--font-body-large);
+        line-height: var(--line-height-large);
+    }
+}
+
+/* desktop medium */
+@media screen and (min-width: 1280px) {
+    main {
+        width: 80%;
+        justify-self: center;
+    }
+}

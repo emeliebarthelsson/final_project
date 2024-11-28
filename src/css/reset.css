@@ -33,3 +33,7 @@ a {
     background-color: var(--logo-green);
     color: var(--secondary-font-color);
 }
+
+svg:hover {
+    cursor: pointer;
+}
