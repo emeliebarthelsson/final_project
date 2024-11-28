@@ -1,0 +1,33 @@
+main {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-large);
+    padding: var(--spacing-medium);
+}
+
+.img-container {
+    width: 100%;
+}
+
+.img-container img {
+    width: 100%;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-x-small);
+    line-height: var(--line-height);
+    margin-bottom: var(--spacing-x-large);
+}
+
+.about__heading {
+    font-size: var(--font-heading-small);
+    font-weight: 400;
+}
+
+.about__text {
+    font-size: var(--font-body-medium);
+}
