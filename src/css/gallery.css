@@ -1,0 +1,72 @@
+main {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-small);
+}
+
+.gallery__card {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--spacing-large);
+    border-radius: 0 0 var(--border-radius-small) var(--border-radius-small);
+}
+
+.gallery__card:hover {
+    background-color: var(--light-hover);
+}
+
+.gallery__card img {
+    width: 100%;
+}
+
+.card__content {
+    padding: var(--spacing-small);
+    line-height: var(--line-height);
+}
+
+@media screen and (min-width: 480px) {
+    .gallery-container {
+        padding: var(--spacing-x-large);
+    } 
+}
+
+/* tablet */
+@media screen and (min-width: 768px) {
+    .gallery-container {
+        padding: calc(var(--spacing-xx-large)*2);
+    }
+}
+
+/* desktop small */
+@media screen and (min-width: 1024px) {
+    .gallery-container {
+        padding: var(--spacing-large);
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+        gap: var(--spacing-large);
+    }
+
+    .grid__card {
+        max-width: 450px;
+    }
+}
+
+/* desktop medium */
+@media screen and (min-width: 1280px) {
+    
+}
+
+/* desktop large */
+@media screen and (min-width: 1440px) {
+    
+}
+
+

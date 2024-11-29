@@ -14,6 +14,7 @@ footer {
     position: absolute;
     left: -22%;
     bottom: 0;
+    z-index: -1;
 }
 
 .footer__contact-container {
