@@ -1,9 +1,19 @@
 footer {
     width: 100%;
+    height: 300px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: var(--spacing-large);
     padding: var(--spacing-medium);
+    position: relative;
+    overflow: hidden;
+}
+
+.footer__background-container {
+    position: absolute;
+    left: -22%;
+    bottom: 0;
 }
 
 .footer__contact-container {
@@ -36,8 +46,17 @@ footer {
 /* tablet */
 @media screen and (min-width: 768px) {
     footer {
+        height: 350px;
         gap: var(--spacing-xx-large);
         padding: var(--spacing-x-large);
+    }
+
+    .footer__background-container {
+        left: -5%;
+    }
+
+    .footer__background {
+        height: 340px;
     }
 
     .footer__contact-container h3 {
@@ -66,6 +85,10 @@ footer {
         grid-template-columns: repeat(2, 1fr);
         gap: var(--spacing-medium);
         padding: var(--spacing-xx-large);
+    }
+
+    .footer__background-container {
+        bottom: 5%;
     }
 
     .footer__contact-container {
