@@ -13,11 +13,12 @@
     --dark-hover: #242323;
     --dark-press: #2C2B2B;
 
-    --green-hover: hsl(80, 56%, 11%);
-    --green-press: hsl(80, 56%, 8%);
+    --green-hover: #212c0c;
+    --green-press: #182009;
+    --green-opacity: #2b3810b3;
 
-    --light-hover: hsl(84, 10%, 84%);
-    --light-press: hsl(84, 10%, 81%);
+    --light-hover: #d7dad2;
+    --light-press: #d0d3ca;
 
     --disabled-background: #1c1b1b0d;
     --disabled-label: #1c1b1b33;

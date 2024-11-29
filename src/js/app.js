@@ -276,3 +276,21 @@ function renderGallery(images) {
     });
 };
 
+// back-to-top button for gallery
+const toTopButton = document.querySelector(".to-top");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 600) {
+        toTopButton.style.display = "block";
+    } else {
+        toTopButton.style.display ="none";
+    }
+});
+
+toTopButton.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+

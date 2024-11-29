@@ -32,6 +32,18 @@ main {
     line-height: var(--line-height);
 }
 
+.to-top {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    position: fixed;
+    bottom: 2rem;
+    right: 1rem;
+    display: none;
+    background-color: var(--green-opacity);
+}
+
 @media screen and (min-width: 480px) {
     .gallery-container {
         padding: var(--spacing-x-large);
