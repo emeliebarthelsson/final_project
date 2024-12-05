@@ -11,6 +11,7 @@
 }
 
 body {
+    min-width: 375px;
     font-family: "Inter", sans-serif;
     font-weight: 400;
     color: var(--primary-font-color);
@@ -24,6 +25,10 @@ a {
 
 a:hover {
     color: var(--logo-mustard);
+}
+
+button {
+    cursor: pointer;
 }
 
 .primary__button {
@@ -42,6 +47,24 @@ a:hover {
 .primary__button:active {
     background-color: var(--green-press);
     color: var(--secondary-font-color);
+}
+
+.secondary__button {
+    border: none;
+    padding: var(--spacing-small) var(--spacing-medium);
+    border-radius: var(--border-radius);
+    background-color: var(--secondary-font-color);
+    color: var(--primary-font-color);
+}
+
+.secondary__button:hover {
+    background-color: var(--light-hover);
+    color: var(--primary-font-color);
+}
+
+.secondary__button:active {
+    background-color: var(--light-press);
+    color: var(--primary-font-color);
 }
 
 svg:hover {

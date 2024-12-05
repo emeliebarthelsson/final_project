@@ -6,10 +6,9 @@
     <link rel="stylesheet" href="../css/reset.css"/>
     <link rel="stylesheet" href="../css/variables.css"/>
     <link rel="stylesheet" href="../css/navbar.css"/>
-    <link rel="stylesheet" href="../css/contact.css"/>
+    <link rel="stylesheet" href="../css/store.css"/>
     <link rel="stylesheet" href="../css/footer.css"/>
-    <title>Contact</title>
-    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico"/>
+    <title>Pre-owned</title>
 </head>
 <body>
     <nav class="navbar">
@@ -27,54 +26,13 @@
         </div>
         <div class="navbar__button-container">
             <a class="navbar__link primary__button" href="./contact.html">Contact</a>
+            <button class="primary__button cart__button">Cart
+                <div class="cart-badge">0</div>
+            </button>
         </div>
     </nav>
     <main>
-        <section class="form-container">
-            <form class="form">
-                <h2>Get in touch!</h2>
-                <label for="full-name">Full name</label>
-                <input
-                    class="form__input" 
-                    type="text" 
-                    id="full-name" 
-                    name="full-name"
-                    required
-                    maxlength="50"
-                    placeholder="Anders Andersson"
-                />
-                <label for="email">Email address</label>
-                <input
-                    class="form__input" 
-                    type="email" 
-                    id="email" 
-                    name="email"
-                    required
-                    maxlength="50"
-                    placeholder="anders.andersson@example.com"
-                />
-                <label for="phone">Phone number</label>
-                <input
-                    class="form__input" 
-                    type="tel" 
-                    id="phone" 
-                    name="phone" 
-                    pattern="[0-9]{8}"
-                    placeholder="Enter phone number"
-                />
-                <label for="project">About the project</label>
-                <textarea class="form__input-text" name="project" id="project" rows="5" maxlength="250" required></textarea>
-                <label for="find">How did you find me?</label>
-                <select class="form__input" name="find" id="find" required>
-                    <option value="instagram">Instagram</option>
-                    <option value="google">Google</option>
-                    <option value="facebook">Facebook</option>
-                    <option value="referral">Referral</option>
-                    <option value="other">Other</option>
-                </select>
-                <input class="form__button primary__button" type="submit" value="Send">
-            </form>
-        </section>
+        <section class="store-container"></section>
     </main>
     <footer class="footer">
         <div class="footer__background-container">
@@ -97,6 +55,6 @@
             <img class="social__link" src="../assets/icons/facebook-icon-logo-svgrepo-com.svg" alt="Facebook icon">
         </div>
     </footer>
-    <script src="/src/js/contact.js"></script>
+    <script src="../js/store.js"></script>
 </body>
 </html>

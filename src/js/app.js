@@ -115,7 +115,7 @@ const images = [
   },
   {
     imageUrl: "../assets/images/img20.JPG",
-    watch: "Oris Diver 68 cotton candy",
+    watch: "Oris Diver 65 cotton candy",
     camera: "FUJIFILM X-T4",
     focalLength: "35mm",
   },
@@ -169,7 +169,7 @@ const images = [
   },
   {
     imageUrl: "../assets/images/img29.JPG",
-    watch: "Oris Diver 68 cotton candy",
+    watch: "Oris Diver 65 cotton candy",
     camera: "FUJIFILM X-T4",
     focalLength: "300mm",
   },
@@ -187,7 +187,7 @@ const images = [
   },
   {
     imageUrl: "../assets/images/img32.JPG",
-    watch: "Cartina DS Acion Diver",
+    watch: "Certina DS Acion Diver",
     camera: "FUJIFILM X-T4",
     focalLength: "35mm",
   },
@@ -205,7 +205,7 @@ const images = [
   },
   {
     imageUrl: "../assets/images/img35.JPG",
-    watch: "Oris Diver 68 cotton candy",
+    watch: "Oris Diver 65 cotton candy",
     camera: "FUJIFILM X-T4",
     focalLength: "35mm",
   },
@@ -244,7 +244,8 @@ const images = [
 // get element
 const galleryCardContainer = document.querySelector(".gallery-container");
 
-window.addEventListener("DOMContentLoaded", renderGallery(images));
+// event listener to window
+window.addEventListener("DOMContentLoaded", () => renderGallery(images));
 
 // render gallery
 function renderGallery(images) {
@@ -293,4 +294,3 @@ toTopButton.addEventListener("click", () => {
         behavior: "smooth"
     });
 });
-

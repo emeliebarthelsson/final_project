@@ -5,68 +5,64 @@ main {
     flex-direction: column;
 }
 
-.gallery-container {
+.store-container {
     width: 100%;
     display: flex;
     flex-direction: column;
     padding: var(--spacing-small);
 }
 
-.gallery__card {
+.store__card {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     margin-bottom: var(--spacing-large);
     border-radius: 0 0 var(--border-radius-small) var(--border-radius-small);
 }
 
-.gallery__card:hover {
+.store__card:hover {
     background-color: var(--light-hover);
 }
 
-.gallery__card img {
+.store__card img {
     width: 100%;
 }
 
 .card__content {
     padding: var(--spacing-small);
     line-height: var(--line-height);
+    position: relative;
 }
 
-.to-top {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    border: none;
-    position: fixed;
-    bottom: 2rem;
-    right: 1rem;
-    display: none;
-    background-color: var(--green-opacity);
+.card__content .secondary__button {
+    position: absolute;
+    right: var(--spacing-small);
+    bottom: var(--spacing-small);
 }
 
 @media screen and (min-width: 480px) {
-    .gallery-container {
+    .store-container {
         padding: var(--spacing-x-large);
     } 
 }
 
 /* tablet */
 @media screen and (min-width: 768px) {
-    .gallery-container {
+    .store-container {
         padding: calc(var(--spacing-xx-large)*2);
     }
 }
 
 /* desktop small */
 @media screen and (min-width: 1024px) {
-    .gallery-container {
-        padding: var(--spacing-large);
+    .store-container {
+        padding: var(--spacing-x-large);
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
         gap: var(--spacing-large);
     }
 
-    .gallery__card {
+    .store__card {
         max-width: 450px;
     }
 }
