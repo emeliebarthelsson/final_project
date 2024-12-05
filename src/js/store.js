@@ -92,3 +92,60 @@ function renderStore(items) {
         storeCardContainer.append(card);
     });
 };
+
+// cart
+// get elements
+const cart = document.querySelector(".cart");
+const cartButton = document.querySelector(".cart__button");
+const totalPrice = document.querySelector(".content-total");
+const closeCart = document.querySelector(".button__close");
+const removeButton = document.querySelector(".button__remove");
+const contentList = document.querySelector(".content-list");
+
+function renderCartContent() {
+  if (shoppingCart.length !== 0) {
+    contentList.textContent = "";
+
+    shoppingCart.forEach((item) => {
+      const contentItem = document.createElement("li");
+      contentItem.classList.add("list-item");
+
+      const contentItemImg = document.createElement("img");
+      contentItemImg.classList.add("list-item__img");
+      contentItemImg.src = item.imageUrl;
+
+      const watchPriceContainer = document.createElement("div");
+      watchPriceContainer.classList.add("list-item__description");
+
+      const watch = document.createElement("p");
+      watch.textContent = item.watch;
+
+      const price = document.createElement("p");
+      price.textContent = `${item.price} NOK`;
+
+      watchPriceContainer.append(watch, price);
+      contentItem.append(contentItemImg, watchPriceContainer);
+      contentList.append(contentItem);
+    });
+  } else  {
+    contentList.textContent = "Your cart is empty";
+  }
+
+  const totalPriceAmount = shoppingCart.reduce((acc, item) => acc + item.price, 0);
+  totalPrice.textContent = `Total: ${totalPriceAmount} NOK`;
+};
+
+cartButton.addEventListener("click", () => {
+  renderCartContent();
+  cart.showModal();
+});
+
+closeCart.addEventListener("click", () => {
+  cart.close();
+});
+
+removeButton.addEventListener("click", () => {
+  shoppingCart.length = 0;
+  cartBadge.textContent = 0;
+  renderCartContent();
+});

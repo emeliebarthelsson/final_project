@@ -43,6 +43,15 @@ main {
     cursor: pointer;
 }
 
+.submit-content {
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: var(--spacing-large);
+}
+
 /* tablet */
 @media screen and (min-width: 768px) {
     main {

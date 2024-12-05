@@ -70,3 +70,7 @@ button {
 svg:hover {
     cursor: pointer;
 }
+
+ul {
+    list-style-type: none;
+}

@@ -11,8 +11,18 @@ form.addEventListener("submit", (event) => {
 
     // create elements
     const content = document.createElement("div");
-    content.textContent = `Thank you! I will contact you in 1-3 days. Have a nice day!`;
+    content.classList.add("submit-content");
+
+    const contentHeading = document.createElement("h3");
+    contentHeading.textContent = "Thank you!";
+
+    const contentText = document.createElement("p");
+    contentText.textContent = "I will contact you in 1-3 days";
+
+    const contentGreeting = document.createElement("p");
+    contentGreeting.textContent = "Have a nice day!";
 
     // append content
+    content.append(contentHeading, contentText, contentGreeting);
     container.append(content);
 });

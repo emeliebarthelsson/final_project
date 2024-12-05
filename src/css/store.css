@@ -40,6 +40,56 @@ main {
     bottom: var(--spacing-small);
 }
 
+.cart {
+    width: 90%;
+    height: fit-content;
+    position: fixed;
+    top: var(--spacing-x-large);
+    left: var(--spacing-x-large);
+    background-color: var(--primary-background-color);
+    border: none;
+    border-radius: var(--border-radius-small);
+    padding: var(--spacing-x-large);
+}
+
+.cart__heading {
+    text-align: center;
+    margin-bottom: var(--spacing-x-large);
+}
+
+.cart__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-x-large);
+}
+
+.content-total {
+    font-weight: 600;
+}
+
+.content__button-container {
+    display: flex;
+    gap: var(--spacing-x-large);
+}
+
+.content-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-medium);
+}
+
+.list-item {
+    height: 5rem;
+    display: flex;
+    gap: var(--spacing-medium);
+}
+
+.list-item__img {
+    width: 4rem;
+    height: auto;
+}
+
 @media screen and (min-width: 480px) {
     .store-container {
         padding: var(--spacing-x-large);
