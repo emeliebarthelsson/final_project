@@ -24,7 +24,6 @@
     display: flex;
     gap: var(--spacing-medium);
     align-items: center;
-    padding-left: var(--spacing-x-small);
     margin-bottom: var(--spacing-large);
 }
 

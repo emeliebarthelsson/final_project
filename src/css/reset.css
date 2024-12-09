@@ -67,6 +67,24 @@ button {
     color: var(--primary-font-color);
 }
 
+.ghost__button {
+    border: none;
+    padding: var(--spacing-small) var(--spacing-medium);
+    border-radius: var(--border-radius);
+    background-color: transparent;
+    color: var(--primary-font-color);
+}
+
+.ghost__button:hover {
+    background-color: var(--light-hover);
+    color: var(--primary-font-color);
+}
+
+.ghost__button:active {
+    background-color: var(--light-press);
+    color: var(--primary-font-color);
+}
+
 svg:hover {
     cursor: pointer;
 }

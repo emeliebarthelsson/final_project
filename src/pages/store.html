@@ -32,6 +32,17 @@
         </div>
     </nav>
     <main>
+        <section class="search-sort-container">
+            <div class="search">
+                <label for="search">Search watches:</label>
+                <input class="search__input" type="search" name="search" id="search">
+            </div>
+            <div class="sort-buttons">
+                <button class="sort-button ghost__button" data-sort="all">All</button>
+                <button class="sort-button ghost__button" data-sort="price-low">Price low to high</button>
+                <button class="sort-button ghost__button" data-sort="price-high">Price high to low</button>
+            </div>
+        </section>
         <section class="store-container"></section>
         <section class="cart-container">
             <dialog class="cart">
