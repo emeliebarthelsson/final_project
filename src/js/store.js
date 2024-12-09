@@ -50,15 +50,9 @@ const items = [
   },
 ];
 
-// variable
-const shoppingCart = [];
-
 // get element
 const cartBadge = document.querySelector(".cart-badge");
 const storeCardContainer = document.querySelector(".store-container");
-
-// event listener to window
-window.addEventListener("DOMContentLoaded", () => renderStore(items));
 
 // render store items
 function renderStore(items) {
@@ -91,7 +85,9 @@ function renderStore(items) {
         // event listener to "add to cart" button
         addToCart.addEventListener("click", () => {
             shoppingCart.push(item);
-            cartBadge.textContent = shoppingCart.length;
+            storeCart();
+            renderCartContent();
+            updateCartBadge();
         });
 
         // append elements
@@ -139,6 +135,9 @@ sortButtons.forEach(button => {
 });
 
 // cart
+// variable
+const shoppingCart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
+
 // get elements
 const cart = document.querySelector(".cart");
 const cartButton = document.querySelector(".cart__button");
@@ -146,6 +145,11 @@ const totalPrice = document.querySelector(".content-total");
 const closeCart = document.querySelector(".button__close");
 const removeButton = document.querySelector(".button__remove");
 const contentList = document.querySelector(".content-list");
+
+// store cart
+function storeCart() {
+  localStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
+}
 
 function renderCartContent() {
   if (shoppingCart.length !== 0) {
@@ -181,6 +185,10 @@ function renderCartContent() {
   totalPrice.textContent = `Total: ${totalPriceAmount} NOK`;
 };
 
+function updateCartBadge() {
+  cartBadge.textContent = shoppingCart.length;
+}
+
 cartButton.addEventListener("click", () => {
   renderCartContent();
   cart.showModal();
@@ -192,6 +200,13 @@ closeCart.addEventListener("click", () => {
 
 removeButton.addEventListener("click", () => {
   shoppingCart.length = 0;
-  cartBadge.textContent = 0;
   renderCartContent();
+  storeCart();
+  updateCartBadge();
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  renderStore(items);
+  renderCartContent();
+  updateCartBadge();
 });

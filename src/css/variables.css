@@ -9,6 +9,10 @@
     /****** background ******/
     --primary-background-color: #E6E8E3;
 
+    /****** font color ******/
+    --primary-font-color: #1C1B1B;
+    --secondary-font-color: #FFFFFF;
+
     /****** interaction ******/
     --dark-hover: #242323;
     --dark-press: #2C2B2B;
@@ -42,9 +46,6 @@
 
     --line-height: 1.5rem;
     --line-height-large: 2rem;
-
-    --primary-font-color: #1C1B1B;
-    --secondary-font-color: #FFFFFF;
 
     /****** font heading ******/
     --font-heading-small: 1.5rem;
