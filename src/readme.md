@@ -17,7 +17,7 @@ Purpose of this assignment:
 https://github.com/emeliebarthelsson/final_project.git
 
 ## Netlify
-
+https://jazzy-churros-3b525b.netlify.app/
 
 ## Author
 Emelie Barthelsson 
