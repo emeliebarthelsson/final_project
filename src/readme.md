@@ -10,6 +10,8 @@ Purpose of this assignment:
 ## Credit
 - Photos taken by Anton Östman Photography (@watchbud), permission to use
 - Logomark and logotype made by Natalie Barthelsson for Anton Östman Photography
+- Functions in JavaScript was inspired by school workshops
+- Solution to a bug fix was inspired by chatGPT generated suggestions
 
 ## Github repository
 https://github.com/emeliebarthelsson/final_project.git

@@ -50,7 +50,7 @@ const items = [
   },
 ];
 
-// get element
+// get elements
 const cartBadge = document.querySelector(".cart-badge");
 const storeCardContainer = document.querySelector(".store-container");
 
@@ -58,7 +58,7 @@ const storeCardContainer = document.querySelector(".store-container");
 function renderStore(items) {
     storeCardContainer.textContent = "";
     items.forEach(item => {
-        // create elements
+        // create elements and content
         const card = document.createElement("div");
         card.classList.add("store__card");
 
@@ -84,7 +84,7 @@ function renderStore(items) {
 
         // event listener to "add to cart" button
         addToCart.addEventListener("click", () => {
-            shoppingCart.push(item);
+            shoppingCart.push(item); // add item to shopping cart
             storeCart();
             renderCartContent();
             updateCartBadge();
@@ -101,12 +101,14 @@ function renderStore(items) {
 // get element 
 const search = document.querySelector(".search__input");
 
+// event listener to search input
 search.addEventListener("input", (event) => {
   let filteredWatches = [...items];
   filteredWatches = filteredWatches.filter((item) => {
     return item.watch.toLowerCase().startsWith(event.target.value.toLowerCase());
   });
 
+  // render filtered store items
   renderStore(filteredWatches);
 });
 
@@ -114,6 +116,7 @@ search.addEventListener("input", (event) => {
 // get element
 const sortButtons = document.querySelectorAll(".sort-button");
 
+// sort store items
 const sortWatches = (event) => {
   let sortedWatches = [...items];
 
@@ -126,6 +129,7 @@ const sortWatches = (event) => {
     sortedWatches = [...items];
   }
 
+  // render sorted store items
   renderStore(sortedWatches);
 };
 
@@ -134,7 +138,7 @@ sortButtons.forEach(button => {
   button.addEventListener("click", (event) => sortWatches(event));
 });
 
-// cart
+// shopping cart
 // variable
 const shoppingCart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
 
@@ -151,11 +155,13 @@ function storeCart() {
   localStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
 }
 
+// render cart items
 function renderCartContent() {
   if (shoppingCart.length !== 0) {
     contentList.textContent = "";
 
     shoppingCart.forEach((item) => {
+      // create elements and content
       const contentItem = document.createElement("li");
       contentItem.classList.add("list-item");
 
@@ -173,22 +179,26 @@ function renderCartContent() {
       const price = document.createElement("p");
       price.textContent = `${item.price} NOK`;
 
+      // append elements
       watchPriceContainer.append(watch, price);
       contentItem.append(contentItemImg, watchPriceContainer);
       contentList.append(contentItem);
     });
-  } else  {
+  } else {
     contentList.textContent = "Your cart is empty";
   }
 
+  // total price of items in cart
   const totalPriceAmount = shoppingCart.reduce((acc, item) => acc + item.price, 0);
   totalPrice.textContent = `Total: ${totalPriceAmount} NOK`;
 };
 
+// function for cart badge
 function updateCartBadge() {
   cartBadge.textContent = shoppingCart.length;
 }
 
+// event listeners to cart buttons
 cartButton.addEventListener("click", () => {
   renderCartContent();
   cart.showModal();
@@ -205,6 +215,7 @@ removeButton.addEventListener("click", () => {
   updateCartBadge();
 });
 
+// event listener to document
 document.addEventListener("DOMContentLoaded", () => {
   renderStore(items);
   renderCartContent();

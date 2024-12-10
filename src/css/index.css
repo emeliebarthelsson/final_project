@@ -6,6 +6,7 @@ main {
     gap: 80px;
 }
 
+/* hero section */
 .hero-container {
     width: 100%;
     height: auto;
@@ -16,6 +17,7 @@ main {
     height: fit-content;
 }
 
+/* about section */
 .about-container {
     width: 100%;
     display: flex;
@@ -34,6 +36,7 @@ main {
     line-height: var(--line-height);
 }
 
+/* horizontal scroll */
 .carousel-container {
     width: 100%;
     display: flex;
@@ -52,6 +55,7 @@ main {
     width: 100%;
 }
 
+/* review section */
 .review-container {
     display: flex;
     justify-content: center;

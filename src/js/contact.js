@@ -9,7 +9,7 @@ form.addEventListener("submit", (event) => {
     // hide elements
     form.style.display = "none";
 
-    // create elements
+    // create elements and content
     const content = document.createElement("div");
     content.classList.add("submit-content");
 

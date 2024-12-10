@@ -25,6 +25,7 @@
     gap: var(--spacing-medium);
     align-items: center;
     margin-bottom: var(--spacing-large);
+    font-weight: 600;
 }
 
 .navbar__button-container {
@@ -62,12 +63,13 @@
     right: -4px;
 }
 
+/* tablet */
 @media screen and (min-width: 768px) {
     .navbar {
         font-size: var(--font-heading-small);
         display: flex;
         justify-content: end;
-        gap: var(--spacing-x-large);
+        gap: var(--spacing-large);
         align-items: center;
         padding: var(--spacing-x-large);
     }
@@ -96,6 +98,7 @@
     }
 }
 
+/* desktop small */
 @media screen and (min-width: 1024px) {
     .navbar__links-container {
         gap: var(--spacing-x-large);

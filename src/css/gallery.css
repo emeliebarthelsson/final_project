@@ -32,6 +32,7 @@ main {
     line-height: var(--line-height);
 }
 
+/* to-top-button */
 .to-top {
     width: 48px;
     height: 48px;
@@ -42,8 +43,10 @@ main {
     right: 1rem;
     display: none;
     background-color: var(--green-opacity);
+    z-index: 1;
 }
 
+/* tablet small */
 @media screen and (min-width: 480px) {
     .gallery-container {
         padding: var(--spacing-x-large);
@@ -64,6 +67,7 @@ main {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
         gap: var(--spacing-large);
+        place-items: center;
     }
 
     .gallery__card {

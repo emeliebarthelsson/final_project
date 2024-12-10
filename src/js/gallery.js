@@ -297,7 +297,7 @@ window.addEventListener("DOMContentLoaded", () => renderGallery(images));
 function renderGallery(images) {
     galleryCardContainer.textContent = "";
     images.forEach(image => {
-        // create elements
+        // create elements and content
         const card = document.createElement("div");
         card.classList.add("gallery__card");
 
@@ -327,6 +327,7 @@ function renderGallery(images) {
 // back-to-top button for gallery
 const toTopButton = document.querySelector(".to-top");
 
+// event listener to window 
 window.addEventListener("scroll", () => {
     if (window.scrollY > 600) {
         toTopButton.style.display = "block";
@@ -335,6 +336,7 @@ window.addEventListener("scroll", () => {
     }
 });
 
+// event listener to back-to-top button
 toTopButton.addEventListener("click", () => {
     window.scrollTo({
         top: 0,

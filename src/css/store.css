@@ -5,6 +5,7 @@ main {
     flex-direction: column;
 }
 
+/* search and sort */
 .search-sort-container {
     padding: var(--spacing-small);
 }
@@ -36,6 +37,11 @@ main {
     gap: var(--spacing-medium);
 }
 
+.sort-button {
+    font-size: var(--font-body-medium);
+} 
+
+/* store */
 .store-container {
     width: 100%;
     display: flex;
@@ -71,6 +77,7 @@ main {
     bottom: var(--spacing-small);
 }
 
+/* shopping cart */
 .cart {
     width: 90%;
     height: fit-content;
@@ -121,6 +128,7 @@ main {
     height: auto;
 }
 
+/* tablet small */
 @media screen and (min-width: 480px) { 
     .store-container {
         padding: var(--spacing-x-large);
@@ -131,8 +139,9 @@ main {
 @media screen and (min-width: 768px) {
     .search-sort-container {
         display: flex;
-        justify-content: space-between;
+        justify-content: end;
         align-items: center;
+        gap: var(--spacing-small);
         padding: var(--spacing-x-large);
     }
     
@@ -147,11 +156,16 @@ main {
 
 /* desktop small */
 @media screen and (min-width: 1024px) {
+    .search-sort-container {
+        gap: var(--spacing-medium);
+    }
+
     .store-container {
         padding: var(--spacing-x-large);
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
         gap: var(--spacing-large);
+        place-items: center;
     }
 
     .store__card {
